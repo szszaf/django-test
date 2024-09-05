@@ -1,0 +1,15 @@
+<html lang="pl">
+    <head>
+        <title>Authors</title>
+    </head>
+    <body>
+        <div id="authorsWall">
+            {% for author in authors %}
+                <p id="author{{forloop.counter}}">
+                    <h2>{{ author.first_name }} {{ author.last_name }}</h2>
+                    <img src="{{ author.image }}" width="200px" height="300px" alt="author image">
+                </p>
+            {% endfor %}
+        </div>
+    </body>
+</html>
